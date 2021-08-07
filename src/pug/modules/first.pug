@@ -1,0 +1,32 @@
+
+header.header
+      .container
+        .header__body
+          a(href="#!").header__logo
+            img(src="assets/img/clock.svg",alt="img")
+          nav.header__menu.menu
+            i.icon-close2.header__close
+            ul.menu__list
+              li.menu__item
+                  a.menu__link(href="#bunner") Home 
+              - 
+                      items = [
+                          { title: "posts", url: "#posts"},
+                          { title: "projects", url: "#projects"},
+                          //- { title: "mission", url: "#mission"},
+                          //- { title: "Компания", url: "#strategy"},
+                          //- { title: "Компания", url: "#values"},
+                          //- { title: "Компания", url: "#manifest"},
+                          //- { title: "Компания", url: "#team"},
+                        ]
+              each item in items
+                li.menu__item
+                  a.menu__link(href=item.url)=item.title
+          .header__info.info
+              a.info_phone(href='#!') +7(000) 123 45 65
+              form.info_search
+                input(type='text' placeholder='Поиск')
+                i.icon-Vector
+                input(type='submit')
+          i.icon-menu1.header__burger
+

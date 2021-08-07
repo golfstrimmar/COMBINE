@@ -1,0 +1,112 @@
+body
+  +bg(white)
+  font-family: 'Poppins', sans-serif
+  font-style: normal
+  font-weight: 500
+  font-size: 18px
+  line-height: 1
+  color: #000000
+  
+
+
+
+h1,h2,h3,h4, h5, h6
+  display: inline-block
+  margin: 0 auto
+
+h1
+  font-size: 60px
+  font-weight: 700
+  text-transform: uppercase
+  line-height: 1
+  color: white
+  text-shadow: 0px 0px 4px blue
+  @media (min-width: 1000px) and (max-width: 1199px)
+    font-size: 60px
+    line-height: 1.2
+  @media (max-width: 999px)
+    font-size: 30px
+//     line-height: 1.2
+  
+h2 
+  font-size: 15px
+  font-weight: 700
+  line-height: 1
+//   @media (min-width: 1000px) and (max-width: 1199px)
+//     font-size: 30px
+//   @media (max-width: 999px)
+//     font-size: 20px
+
+
+
+
+
+
+.title 
+  width: 100%
+  +jucc	
+
+.title 
+  h2 
+    font-size: 40px
+    +f700
+    +tu
+@media (min-width: 768px) and (max-width: 1199px)
+  .title 
+    h2 
+      font-size: 30px
+@media (max-width: 767px)
+  .title 
+    h2 
+      font-size: 20px
+
+.btn 
+  border: 1px solid transparent
+  outline: none!important
+  transition: all 0.2s ease-in-out
+  diplay: inline-block
+  +center
+
+
+
+input
+  transition: all .2s aesy-in-out
+  &::placeholder
+    transition: all .2s aesy-in-out
+  & + i
+    transition: all .2s aesy-in-out
+  &:focus
+    &::placeholder
+      opacity: 0
+  &:active
+    &::placeholder
+      opacity: 0
+.btn--success
+  color: white
+  +bg($active)
+  &:hover
+    +bg(lighten($active,30%))
+    +border(1px , darken($active,10%)!important)
+    box-shadow: 0px 0px 20px lighten($active,60%)!important
+    color: lighten($active,10%)
+  &:focus
+    +border(1px , darken($active,10%)!important)
+    +bg(lighten($active,10%))
+    box-shadow: 0px 0px 20px lighten($active,60%)!important
+    color: white
+  
+.btn--empty 
+  +bg(white)
+  +border(1px,$active)
+  // &:hover
+  //   +bg(lighten($active,30%))
+  //   +border(1px , darken($active,10%)!important)
+  //   box-shadow: 0px 0px 20px lighten($active,60%)!important
+  //   color: lighten($active,10%)
+  &:focus
+    +border(1px , darken($active,10%)!important)
+    +bg(lighten($active,10%))
+    box-shadow: 0px 0px 20px lighten($active,60%)!important
+    color: white
+
+

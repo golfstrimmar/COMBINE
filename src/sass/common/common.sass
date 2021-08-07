@@ -1,0 +1,87 @@
+*
+  // outline: 1px solid green
+  box-sizing: border-box
+
+
+.container
+  // outline: 1px solid #4164ff
+//------.container--------
+.container
+  max-width: 1230px
+  width: 100%
+  margin: 0 auto
+ 
+  
+  @media (min-width: 1000px) and (max-width: 1290px)
+    margin: 0 30px
+    width: calc( 100% -  60px)
+
+  @media (max-width: 999px)
+    margin: 0 20px
+    width: calc( 100% -  40px)
+
+
+
+
+.wrapper
+  // overflow: hidden
+  min-height: 100vh
+
+
+.bg
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+a
+  display: block
+  transition: all 0.2s ease-in-out
+  color: #000
+
+  &:hover
+    color: $active
+    cursor: pointer
+
+
+.lock
+  overflow: hidden
+.active
+  opacity: 1
+  visibility: visible
+  display: block
+
+
+
+
+
+
+
+img 
+  opacity: 1
+  transition: opacity .3s
+ 
+img[data-src] 
+  opacity: 0
+
+  
+  
+.imgs
+  overflow: hidden
+  position: relative
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  img
+    height: 100%
+    width: 100%
+    object-fit: cover
+    object-position: top
+    position: absolute
+    top: 0
+    left: 0
+
+
+
+

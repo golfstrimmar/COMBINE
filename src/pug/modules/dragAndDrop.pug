@@ -1,0 +1,95 @@
+//- section#team.team
+//-     .container
+//-       .team__body
+//-         .team__item  
+//-             .item__img
+//-               .imgs
+//-                 img(src='assets/img/paralax@3.webp' alt='img')
+//-             p.item__text Cargo Expert
+//-             .item__title
+//-               h2 MARK DONALD
+//-             .item__soc.soc
+//-               a.soc__button.icon-thumbs-up(href='#!')  
+//-               a.soc__button.icon-thumbs-up(href='#!')  
+//-               a.soc__button.icon-thumbs-up(href='#!')  
+            
+      
+
+section#dd.dd
+      .dd__body.list
+        .list__canvas.canvas 
+          .canvas__item.canvas__item-1
+            i.close.icon-bin2
+            i.addCol.addCol-1.icon-thumbs-up
+            .list__cell.list__cell--common.js-cell.list__cell--column
+              i.close-sell.icon-bin2 
+          //- .canvas__item.canvas__item-2
+          //-   i.close.icon-bin2
+          //-   i.addCol.addCol-2.icon-thumbs-up
+          //-   .list__cell.list__cell--common.js-cell.list__cell--column
+          //-     i.close-sell.icon-bin2 
+       
+          //- .canvas__item
+          //-   i.close.icon-bin2
+          //-   i.addCol.addCol-2.icon-thumbs-up
+          //-   .list__cell.list__cell--common.js-cell.list__cell.list__cell--row.js-cell
+          //-     i.close-sell.icon-bin2   
+
+        
+        section#product
+          i.close-product.icon-bin2
+          .product
+
+        .list__items
+           
+            .list__card.card.js-card(draggable="true").js-card-img
+              .card__header.icon-image
+              span.monitor-class 
+              .card__info 
+                .js-img
+                  .imgs
+                    img(src='assets/img/paralax@3.webp' alt='img')
+              i.card__destroy.js-cart.icon-bin2
+           
+            .list__card.card.js-card(draggable="true").js-card-title
+              .card__header.icon-format-font-size 
+              span.monitor-class
+              .card__info 
+                .title 
+                  h2  title 
+              i.card__destroy.js-cart.icon-bin2
+          
+            .list__card.card.js-card(draggable="true").js-card-text
+              .card__header.icon-news-paper
+              span.monitor-class
+              .card__info
+                p.text  text
+              i.card__destroy.js-cart.icon-bin2
+         
+            .list__card.card.js-card(draggable="true").js-card-button
+              .card__header.icon-arrow-down
+              span.monitor-class
+              .card__info 
+                a(href='#!').btn.btn--success.button 
+              i.card__destroy.js-cart.icon-bin2
+          
+        form.my-form
+          .my-form__item
+            label класс картинки
+              input.card-input(type="text"  value="__img" placeholder="__img").js-input-img-class
+          .my-form__item
+            label текст заголовка
+              input.card-input(type="text"  value="" placeholder="TITLE").js-input-title
+            label класс заголовка  
+              input.card-input(type="text"   placeholder="__title" value="__title").js-input-title-class
+          .my-form__item
+            label текст текста
+              input.card-input(type="text"  value="" placeholder="text").js-input-text
+            label класс текста
+              input.card-input(type="text"  value="__text" placeholder="__text").js-input-text-class
+          .my-form__item
+            label текст кнопки
+              input.card-input(type="text" value="" placeholder="button").js-input-button
+            label класс кнопки
+              input.card-input(type="text" value="btn btn--success  __button" placeholder="btn btn--success __button").js-input-button-class
+

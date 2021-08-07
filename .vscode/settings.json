@@ -1,0 +1,13 @@
+{
+  // "editor.fontLigatures": null,
+  "editor.hover.enabled": false,
+  "editor.tabSize": 2,
+    "editor.hover.delay": 100,
+    "editor.letterSpacing": 1,
+    // "editor.lineHeight": 17,
+    // "editor.fontWeight": "300",
+    "editor.cursorSurroundingLines": 2,
+    // "breadcrumbs.enabled": false,
+    // "debug.console.fontFamily": "Tahoma",
+    "files.autoSave": "afterDelay",
+}

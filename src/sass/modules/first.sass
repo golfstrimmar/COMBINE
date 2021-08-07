@@ -1,0 +1,208 @@
+//------.first--------
+.first
+  min-height: 100vh
+.header
+  z-index: 1000
+  transition: all 0.2s ease-in-out
+  position: fixed
+  width: 100%
+  height: 80px
+  +bg(rgba(245,245,245,1))
+  display: grid
+  align-items: center
+  .container
+    height: 80%
+  @media (min-width: 1000px) and (max-width: 1199px)
+    height: 60px
+  @media (max-width: 999px)
+    height: 60px
+.info_phone
+  @media (max-width: 999px)
+    color: white
+    text-shadow: 0 0 4px white
+//-------------
+.responciveHeader
+  position: fixed
+  width: 100%
+  height: 60px
+  +bg(rgba(245,245,245, .9))
+
+
+// =======================================================
+
+.header__body
+  margin: 0 auto
+  position: relative
+  height: 100%
+  display: grid
+  grid-template-columns: 100px 1fr minmax(340px, auto)
+  grid-template-rows:  100%
+  grid-template-areas: "logo menu info"
+  @media (min-width: 1000px) and (max-width: 1199px)
+    grid-template-columns: 100px 1fr minmax(260px, auto)
+  @media (max-width: 999px)
+    grid-template-columns: 100px 1fr
+    // margin: 0 10px
+//-------------
+.header__burger
+  display: none
+  &:hover
+    cursor: pointer
+  @media (max-width: 999px)
+    font-size: 20px
+    display: inline-block
+    color: #181818
+    +absolute(20px,20px,50%,auto,0,0%,-50%)
+//-------------
+.header__logo
+  grid-area: logo
+  img
+    height: 100%
+.header__menu
+  margin: 0 30px 0 0
+  position: relative
+  grid-area: menu
+  @media (min-width: 1000px) and (max-width: 1199px)
+    margin: 0 20px 0 0
+  @media (max-width: 999px)
+    width: 100vw
+    min-height: 100vh
+    position: fixed
+    top: 0
+    transform: translateX(-100vw)
+    left: 0
+    padding: 100px 20px 0 20px
+    overflow: auto
+    text-align: right
+    +fdc
+    +jucs
+    +alie
+    +bg(rgba(0,0,0,.95))
+    z-index: 1000
+    transition: all 0.2s ease-in-out
+
+.header__close
+  display: none
+  @media (max-width: 999px)
+    display: block
+    +absolute(auto,auto,10px,auto,10px,0%,0%)
+    color: white
+    font-size: 20px
+    &:hover
+      cursor: pointer
+
+
+.menu-active
+  @media (max-width: 999px)
+    transform: translateX(0)
+
+.menu__list
+  +alic
+  +jucb
+  height: 100%
+  @media (max-width: 999px)
+    +fdc
+    +alie
+    
+.menu__item
+  +alic
+  height: 100%
+  +border(1px , transparent)
+  margin: 0 10px 0 0
+  &:last-child
+    margin: 0 0 0 0
+
+  @media (max-width: 999px)
+    margin: 0 0 20px 0
+    width: 100%
+    &:last-child
+      margin: 0 0 30px 0
+    
+.menu__link
+  +alic
+  height: 100%
+  padding: 0 5px
+  font-size: 12px
+  font-weight: 700
+  text-transform: uppercase
+  &:hover
+    color: white
+    +bg(lighten($active,30%))
+    box-shadow: 0px 0px 20px lighten($active,60%)!important
+  &:focus
+    +border(1px , darken($active,10%)!important)
+    +bg(lighten($active,10%))
+    box-shadow: 0px 0px 20px lighten($active,60%)!important
+    color: white
+  @media (max-width: 999px)
+    color: white
+  
+
+.menu__link--active
+  +bg($active)
+  color: white
+.header__info
+  grid-area: info
+.info
+  +alic
+  +jucb
+  @media (min-width: 1000px) and (max-width: 1199px)
+    padding: 0 0 0 0	
+    +fdc
+    +jucc
+    flex-wrap: nowrap
+  @media (max-width: 999px)
+    display: none!important
+
+.info-active
+  @media (max-width: 999px)
+    display: block!important
+    transition: all 0.2s ease-in-out
+    
+.info_phone
+  font-size: 16px
+  line-height: 23px
+  @media (min-width: 1000px) and (max-width: 1199px)
+    line-height: 20px
+
+    
+.info_search
+  +alic
+  height:25px
+  position: relative
+  margin: 0  0 0 10px 
+  +jucb
+  +bg(white)
+  input[ type = "text"]
+    height: 100%
+    padding: 0 0 0 10px
+    &:hover
+      cursor: pointer
+    &::placeholder
+      color: #757575
+      font-weight: 500
+      font-size: 15px
+      line-height: 1
+  input[ type="submit"]
+    width: 35px
+    height: 25px
+    font-size: 0
+    +bg(transparent)
+    z-index: 3
+    &:hover
+      cursor: pointer
+  i
+    color: #181818
+    font-size: 20px
+    z-index: 2
+    +absolute(auto,auto,50%,auto,10px,0%,-50%)
+  
+  @media (min-width: 1000px) and (max-width: 1199px)
+    margin:  0
+  @media (max-width: 999px)
+    margin: 10px 0 0 0
+    input[ type = "text"]
+      width: 100%
+
+
+
