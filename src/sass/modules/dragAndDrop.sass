@@ -297,6 +297,32 @@
   &:hover
     box-shadow: 0 0 8px rgba(0,0,0, .5)
     
+.baje
+  box-shadow: 0 0 8px rgba(0,0,0, .5)
+  text-shadow: 0 0 3px rgba(0,0,0, 1)
+  padding: 10px
+  position: absolute
+  top: 100px
+  left: 50%
+  border-radius: 20px
+  font-size: 15px
+  opacity: 0
+  transition: all .2s ease-in-out
+  transform: translateX(-50%)  scale(.5)
+  &.active 
+      transform: translateX(-50%) scale(1)
+      +bg(#CCCCCC)
+      color: white
+      box-shadow: inset 0 0 10px rgb(0,0,0,.8)
+      opacity: .6
+
+
+
+
+
+
+
+
 // .team__body
 //   display: grid
 //   grid-template-columns: repeat(auto-fill,250px)
