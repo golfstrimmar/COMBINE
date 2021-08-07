@@ -177,17 +177,17 @@ items.forEach((item)=>{
 CloseMy();
 
 // ----------------------------------------------------------------------
-const CloseMyCanvas = () => {
-let items = document.querySelectorAll('.list__cell'); 
-items.forEach((item)=>{
-    var rem = item.querySelector('.close-sell');
-    const Close =  function () {
-        item.remove();
-            } 
-    rem.addEventListener('click', Close );
-})
-}
-CloseMyCanvas();
+// const CloseMyCanvas = () => {
+// let items = document.querySelectorAll('.list__cell'); 
+// items.forEach((item)=>{
+//     var rem = item.querySelector('.close-sell');
+//     const Close =  function () {
+//         item.remove();
+//             } 
+//     rem.addEventListener('click', Close );
+// })
+// }
+// CloseMyCanvas();
 
 
 // -----------------------------------------------------------------------
