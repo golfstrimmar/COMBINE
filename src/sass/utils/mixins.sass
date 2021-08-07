@@ -1,44 +1,22 @@
-=f($size,$waight,$line-height,$color)
-  font-size: $size
-  font-weight: $waight
-  line-height: $line-height
-  color: $color
 
-
-=pro()
+@mixin pro()
   width: 100%
   height: 100%
   
-=bg($color)
-  background-color: $color
+@mixin bg($color)
+    background-color: $color
 
-=border($width,$color)
+@mixin border($width,$color)
   border: $width solid $color
-=absolute( $width, $height, $top,  $left,  $right,$x,$y) 
-  position: absolute
-  width: $width
-  height: $height
-  top: $top
-  left: $left
-  right: $right
-  transform: translate($x,$y)
 
 // =========================================
-=background-img($url)
+@mixin background-img($url)
   background-image: url($url)
   background-repeat: no-repeat
   background-size: cover
   background-position: center
   // =============================================
 
-=grid($gap)
-  display: grid
-  // grid-template-columns:  repeat(3, 1fr)
-  column-gap: $gap
-
-// ==================================
-=columns($col)
-  grid-template-columns:  $col
 
 // =====================================
 =br

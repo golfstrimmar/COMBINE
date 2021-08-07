@@ -124,11 +124,12 @@ const DragAndDropMy = () => {
     // ---------------------------------------
 
     var info = p.querySelector(".card__info");
-    info.style.cssText="font-size: 20px;color: lime;"
+    info.style.cssText="font-size: 10px;color: lime;"
 
     // добавление новой карточки в нужную область
     this.append(p);
 
+    
     }
 
 
@@ -212,11 +213,11 @@ const AddMyCol1 = () => {
         var infoAll = item.querySelectorAll('.card__info ');
         infoAll.forEach((infoA)=>{
 
-         let pro = document.createElement('div');
-         pro.classList.add(".product-col");
+         let pro = document.createElement('br');
 
-       console.log(infoA.innerHTML)  
          productCol1.append(infoA.innerHTML);
+         productCol1.append(pro);
+         
         })
     }
     )}
