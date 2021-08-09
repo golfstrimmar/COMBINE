@@ -213,9 +213,12 @@ const AddMyCol1 = () => {
         var infoAll = item.querySelectorAll('.card__info ');
         infoAll.forEach((infoA)=>{
 
-         let pro = document.createElement('br');
 
          productCol1.append(infoA.innerHTML);
+
+
+
+         let pro = document.createElement('br');
          productCol1.append(pro);
          
         })

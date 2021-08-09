@@ -8,7 +8,7 @@ import $ from 'jquery';
 
 
 import './js/common'
-// import './js/copy'
+import './js/copy'
 // import './js/scrolling'
 // import './js/first'
 // import './js/header'

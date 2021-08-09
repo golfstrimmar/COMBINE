@@ -1,0 +1,28 @@
+.list__items.list__items--properties
+          .list__card.card.js-card(draggable="true").js-card-grid.card--nth.copytext
+              .card__header(style="text-shadow: 0 0 10px #FF0000; color:SpringGreen")  :nth-child
+              .card__info.card__info--prop &:nth-child()
+              i.card__destroy.js-cart.icon-bin2
+          .list__card.card.js-card(draggable="true").js-card-grid.card--nth.copytext
+              .card__header :nth-of-type()
+              .card__info.card__info--prop &:nth-of-type()
+              i.card__destroy.js-cart.icon-bin2
+          .list__card.card.js-card(draggable="true").js-card-grid.card--nth.copytext
+              .card__header  нечётные строки
+              .card__info.card__info--prop &:nth-child(2n+1)
+              i.card__destroy.js-cart.icon-bin2 
+          .list__card.card.js-card(draggable="true").js-card-grid.card--nth.copytext
+              .card__header  чётные строки
+              .card__info.card__info--prop &:nth-child(2n)
+              i.card__destroy.js-cart.icon-bin2 
+  
+          .list__card.card.js-card(draggable="true").js-card-grid.card--nth.copytext
+              .card__header  элементы с номерами 5, 10,
+              .card__info.card__info--prop &:nth-child(5n)
+              i.card__destroy.js-cart.icon-bin2 
+          .list__card.card.js-card(draggable="true").js-card-grid.card--nth.copytext
+              .card__header  элементы с номерами 4, 7, 10, 13,
+              .card__info.card__info--prop &:nth-child(3n+4)
+              i.card__destroy.js-cart.icon-bin2 
+
+
