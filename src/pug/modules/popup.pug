@@ -1,0 +1,97 @@
+
+
+
+//- hr 
+//- h2(style="padding: 0 0 20px 0	") popup
+
+
+
+
+
+
+
+//- //- одиночная модалка===================
+//- button.btn.btn--success(type='button').btn-popup.popup-init-js  Открыть попап
+//- .popup
+//-     .popup__overlay
+//-       .popup__inner
+//-         p одиночная модалка  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perspiciatis odit quo numquam deserunt, rerum quia rem? Unde dicta possimus ut hic perferendis mollitia asperiores iusto. Quasi reiciendis provident a consectetur at similique sit unde laborum voluptate! Ullam fuga quibusdam, ratione veritatis modi sit non, nam minima architecto nostrum labore. Esse, sint. Nobis explicabo necessitatibus laboriosam voluptatibus natus ullam optio deleniti! Error aliquid voluptates consequuntur nemo, deleniti reiciendis sunt accusantium eius illo natus dignissimos alias accusamus amet? Dolorum eveniet in eaque! Non sed praesentium veniam doloribus vitae, aut provident molestias aspernatur id velit ratione. Iusto adipisci unde mollitia ipsum ea.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perspiciatis odit quo numquam deserunt, rerum quia rem? Unde dicta possimus ut hic perferendis mollitia asperiores iusto. Quasi reiciendis provident a consectetur at similique sit unde laborum voluptate! Ullam fuga quibusdam, ratione veritatis modi sit non, nam minima architecto nostrum labore. Esse, sint. Nobis explicabo necessitatibus laboriosam voluptatibus natus ullam optio deleniti! Error aliquid voluptates consequuntur nemo, deleniti reiciendis sunt accusantium eius illo natus dignissimos alias accusamus amet? Dolorum eveniet in eaque! Non sed praesentium veniam doloribus vitae, aut provident molestias aspernatur id velit ratione. Iusto adipisci unde mollitia ipsum ea.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perspiciatis odit quo numquam deserunt, rerum quia rem? Unde dicta possimus ut hic perferendis mollitia asperiores iusto. Quasi reiciendis provident a consectetur at similique sit unde laborum voluptate! Ullam fuga quibusdam, ratione veritatis modi sit non, nam minima architecto nostrum labore. Esse, sint. Nobis explicabo necessitatibus laboriosam voluptatibus natus ullam optio deleniti! Error aliquid voluptates consequuntur nemo, deleniti reiciendis sunt accusantium eius illo natus dignissimos alias accusamus amet? Dolorum eveniet in eaque! Non sed praesentium veniam doloribus vitae, aut provident molestias aspernatur id velit ratione. Iusto adipisci unde mollitia ipsum ea.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perspiciatis odit quo numquam deserunt, rerum quia rem? Unde dicta possimus ut hic perferendis mollitia asperiores iusto. Quasi reiciendis provident a consecte
+//-         i.icon-x.popup__close.popup__close
+
+
+
+
+
+
+//- ===================несколько модалок на одном скрипте====================================
+
+
+a(href="#!" rel="1-popup").popups-init-js вывод чего-то на одной странице
+a(href="#!" rel="2-popup").popups-init-js открыть 2 попап
+a(href="#!" rel="3-popup").popups-init-js открыть 3 попап
+a(href="#!" rel="4-popup").popups-init-js открыть 4 попап
+
+
+
+section#modaL.modaL
+  #1-popup.popup.popups
+      .popups__overlay
+        .popups__inner
+          i.icon-close21.popup__close.close-js
+          .popups__line
+              p по имени шаблона
+              .copytext    
+                .card__info.fz if( is_page_template( 'templates/template-single.php' )) {  get_template_part('./includes/bunner-single') }
+          .popups__line
+              p по id
+              .copytext    
+                .card__info.fz $id=15;  if( is_page($id) ) {}else{}
+          .popups__line
+              p по слагу страницы
+              .copytext    
+                .card__info.fz if (get_page_by_path("how-we-work")->ID == get_the_ID()) { }else{}
+          
+          .popups__line
+              p вывод записей 
+              .copytext    
+                .card__info.fz     
+                    |`<`?php     
+                    |  global $post;
+                    |  $args = array(       
+                    |  'post_type'=>'post',
+                    |  'post_type'=>'cases', 
+                    |  'cat' => 3,      
+                    |  'publish' => true,
+                    |  'numberposts' => 1,   
+                    |  'p' => 129,           
+                    |  'p' => $postID       
+                    |  );
+                    |  $projects = get_posts($args);  
+                    |  if ($projects ) {foreach($projects as $post){ 
+                    |  setup_postdata( $post );
+                    |?`>` html html html html html html html html одной записи
+                    |`<`?php } } ?`>`
+ 
+
+  #2-popup.popup.popups
+      .popups__overlay
+        .popups__inner
+          i.icon-close21.popup__close.close-js
+          p это 2 попап
+  #3-popup.popup.popups
+      .popups__overlay
+        .popups__inner
+          i.icon-close21.popup__close.close-js
+          p это 3 попап
+  #4-popup.popup.popups
+      .popups__overlay
+        .popups__inner
+          i.icon-close21.popup__close.close-js
+          p это 4 попап
+
+
+
+
+
+
+

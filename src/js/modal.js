@@ -2,29 +2,26 @@ import $ from "jquery";
 
 
 
-// одиночная модалка
-$(document).ready(function() {
-    let pop = $(".popup");
-    let button = $(".popup-init-js");
-    let close = $(".popup__close");
-    pop.fadeOut(1);
-
-    button.on("click", function() {
-        pop.fadeIn(200);
-        $("body").css("overflow", "hidden");
+$(document).ready(function () {
+    let Popups = $(".popups");
+    Popups.fadeOut(200);
+    $(".popups-init-js").on("click", function () {
+      let rel = $(this).attr("rel");
+      let pop = $("div#" + rel);
+      pop.fadeIn(200);
+      $("body").css("overflow", "hidden");
     });
-
-    close.on("click", function() {
-        pop.fadeOut(200);
-        $("body").css("overflow", "visible");
+  
+    $(".close-js").on("click", function () {
+      Popups.fadeOut(200);
+      $("body").css("overflow", "visible");
     });
-});
-
-
-$(document).on("mouseup", function(e) {
-    if ($(".popup__overlay").is(e.target)) {
-        let pop = $(".popup");
-        pop.fadeOut(200);
+  
+    $(document).on("mouseup", function (e) {
+      if ($(".popups__overlay").is(e.target)) {
+        Popups.fadeOut(200);
+        $("body").removeClass("lock");
         $("body").css("overflow", "visible");
-    }
-});
+      }
+    });
+  });

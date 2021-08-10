@@ -16,7 +16,7 @@ import './js/copy'
 // import './js/start-button'
 // import "./js/jquery.nicescroll.min";
 // import "./js/header";
-// import './js/modal'
+import './js/modal'
 // import './js/contacts'
 // import "./js/polzunki";
 
