@@ -26,10 +26,44 @@
               .card__info.card__info--prop $("")
               i.card__destroy.js-cart.icon-bin2 
 
-
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header  .find
-              .card__info.card__info--prop .find(".www")
+              .card__info.card__info--prop .find("  ")
+              i.card__destroy.js-cart.icon-bin2 
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header  .next
+              .card__info.card__info--prop .next("  ")
+              i.card__destroy.js-cart.icon-bin2 
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header  .siblings
+              .card__info.card__info--prop .siblings("  ")
+              i.card__destroy.js-cart.icon-bin2 
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header  .closest
+              .card__info.card__info--prop .closest("  ")
+              i.card__destroy.js-cart.icon-bin2 
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header  .parent
+              .card__info.card__info--prop .parent("  ")
+              i.card__destroy.js-cart.icon-bin2 
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header  .last()
+              .card__info.card__info--prop $("p:first").last()
+              i.card__destroy.js-cart.icon-bin2 
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header  .first()
+              .card__info.card__info--prop $("p:last").first()
+              i.card__destroy.js-cart.icon-bin2 
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header .attr
+              .card__info.card__info--prop $("div").attr({"class":"divEl", "title":"Див"})
               i.card__destroy.js-cart.icon-bin2 
 
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
@@ -55,40 +89,8 @@
               .card__header  on("click"
               .card__info.card__info--prop $(".art_inner__vidget").on("click", "a", function (event) {  });
               i.card__destroy.js-cart.icon-bin2 
-            .list__card.card.js-card(draggable="true").js-card-grid.copytext
-              .card__header  .next
-              .card__info.card__info--prop .next(".www")
-              i.card__destroy.js-cart.icon-bin2 
 
-            .list__card.card.js-card(draggable="true").js-card-grid.copytext
-              .card__header  .siblings
-              .card__info.card__info--prop .siblings(".www")
-              i.card__destroy.js-cart.icon-bin2 
 
-            .list__card.card.js-card(draggable="true").js-card-grid.copytext
-              .card__header  .closest
-              .card__info.card__info--prop .closest('.www')
-              i.card__destroy.js-cart.icon-bin2 
-
-            .list__card.card.js-card(draggable="true").js-card-grid.copytext
-              .card__header  .parent
-              .card__info.card__info--prop .parent('.www')
-              i.card__destroy.js-cart.icon-bin2 
-
-            .list__card.card.js-card(draggable="true").js-card-grid.copytext
-              .card__header  .last()
-              .card__info.card__info--prop $("p:first").last()
-              i.card__destroy.js-cart.icon-bin2 
-
-            .list__card.card.js-card(draggable="true").js-card-grid.copytext
-              .card__header  .first()
-              .card__info.card__info--prop $("p:last").first()
-              i.card__destroy.js-cart.icon-bin2 
-
-            .list__card.card.js-card(draggable="true").js-card-grid.copytext
-              .card__header .attr
-              .card__info.card__info--prop $("div").attr({"class":"divEl", "title":"Див"})
-              i.card__destroy.js-cart.icon-bin2 
 
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header  .append(
@@ -229,7 +231,7 @@
 
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header  события формы
-              .card__info.card__info--prop .focus()  .blur()  .change()  .focusin() .focusout() .select() .submit()
+              .card__info.card__info--prop .focus(function(){})  .blur(function(){})  .change(function(){})  .focusin(function(){}) .focusout(function(){}) .select(function(){}) .submit(function(){})
               i.card__destroy.js-cart.icon-bin2 
 
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
