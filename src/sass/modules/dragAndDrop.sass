@@ -26,6 +26,8 @@
   grid-column: 1/3
   display: grid
   grid-template-columns: 10% 1fr 1fr 1fr
+  position: relative
+  margin: 0 0 0 30px
 
 .list__items--properties
   grid-template-columns: repeat(auto-fill,minmax(131px,1fr))
@@ -350,22 +352,48 @@
     background: LightSlateGray
 
 .list__items--properties-sass
+  
   .card__header
     background: Brown
 
 
+.card__cheap
+  position: absolute
+  top: 0px
+  left: -30px
+  padding: 5px 
+  border: 1px solid DimGray
+  background: SlateGray
+  box-shadow: inset 0 0 8px rgba(0,0,0, 1)
+  font-size:  12px
+  border-radius: 5px
+  +fdc
+  color: white
+  z-index: 2
+  p
+    line-height: 1
 
 
-// .team__body
-//   display: grid
-//   grid-template-columns: repeat(auto-fill,250px)
-//   column-gap: 20px
-// .item__img
-//   position: relative
-//   padding: 0 0 150px 0
-// .team__item
+.wordpress
+  background: SlateBlue
+  color:  white
+  padding: 0 0 100px 0
+  
+  h3
+    text-align: center
+    margin: 0 auto
+    display: block
+    background: indigo
+    text-shadow: 0 0 8px rgba(0,0,0, 1)
+    padding: 5px 0
 
-// .item__soc
-//   display: grid
-//   grid-template-columns: repeat(3, 30px)
-//   column-gap: 10px
+.wordpress__body
+  padding: 0 20px
+  a
+    color:  rgba(225,225,225, 1)
+    text-shadow: 0 0 8px rgba(0,0,0, 1)
+    margin: 10px 0
+    background: BlueViolet
+    padding: 3px 0 3px 5px
+    &:hover
+      background: lighten(BlueViolet, 20%)

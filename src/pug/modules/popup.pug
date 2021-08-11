@@ -24,12 +24,13 @@
 
 
 //- ===================несколько модалок на одном скрипте====================================
-
-
-a(href="#!" rel="1-popup").popups-init-js вывод чего-то на одной странице
-a(href="#!" rel="2-popup").popups-init-js открыть 2 попап
-a(href="#!" rel="3-popup").popups-init-js открыть 3 попап
-a(href="#!" rel="4-popup").popups-init-js открыть 4 попап
+section#wordpress.wordpress
+      h3 WORDPRESS
+      .wordpress__body
+          //- a(href="#!" rel="1-popup").popups-init-js выбор страницы для вывода
+          //- a(href="#!" rel="2-popup").popups-init-js вывод цикла записей
+          //- a(href="#!" rel="3-popup").popups-init-js открыть 3 попап
+          //- a(href="#!" rel="4-popup").popups-init-js открыть 4 попап
 
 
 
@@ -51,33 +52,60 @@ section#modaL.modaL
               .copytext    
                 .card__info.fz if (get_page_by_path("how-we-work")->ID == get_the_ID()) { }else{}
           
-          .popups__line
-              p вывод записей 
-              .copytext    
-                .card__info.fz     
-                    |`<`?php     
-                    |  global $post;
-                    |  $args = array(       
-                    |  'post_type'=>'post',
-                    |  'post_type'=>'cases', 
-                    |  'cat' => 3,      
-                    |  'publish' => true,
-                    |  'numberposts' => 1,   
-                    |  'p' => 129,           
-                    |  'p' => $postID       
-                    |  );
-                    |  $projects = get_posts($args);  
-                    |  if ($projects ) {foreach($projects as $post){ 
-                    |  setup_postdata( $post );
-                    |?`>` html html html html html html html html одной записи
-                    |`<`?php } } ?`>`
+
  
 
   #2-popup.popup.popups
       .popups__overlay
         .popups__inner
           i.icon-close21.popup__close.close-js
-          p это 2 попап
+          .popups__line
+              p вывод записей 
+              .copytext    
+                .card__info.fz     
+                    |    global $post;
+                    |    $args = array(       
+                    |       'post_type'=>'post',
+                    |       'publish' => true,
+                    |       'numberposts' => 200,
+                    |       'category' => 41
+                    |        'p' => 129,           
+                    |        'p' => $postID  
+                    |      );
+                    |      
+                    |    $projects = get_posts($args);  
+                    |    $reversed = array_reverse($projects);
+                    |   
+                    |   if ($projects ) {
+                    |   
+                    |    foreach($reversed as $post){
+                    |      setup_postdata( $post );
+                    |      $post_id = $post->ID;
+                    |      $post_title = $post->post_title; 
+                    |      $post_text=$post->post_content;  
+                    |      $image=get_the_post_thumbnail_url($post_id, 'post');  
+                    |      $link = esc_url( get_permalink( $post_id ) );
+                    |
+                    |   the_ID();
+                    |   the_permalink();
+                    |   post_class();
+                    |   the_content();
+                    |   the_date(); 
+                    |   the_title(); 
+                    |   the_excerpt(); 
+                    |   the_post_thumbnail(); 
+                    |   next_posts_link();
+                    |   previous_posts_link();
+                    |
+                    |
+                    |     div div div div div div div div 
+                    |	 }
+                    | } else {
+                    |  `<`p`>``<`?php _e( 'Sorry, no posts matched your criteria.' ); ?`>``<`/p`>`
+                   
+                    |  }
+                    |  wp_reset_postdata();
+
   #3-popup.popup.popups
       .popups__overlay
         .popups__inner
@@ -88,7 +116,6 @@ section#modaL.modaL
         .popups__inner
           i.icon-close21.popup__close.close-js
           p это 4 попап
-
 
 
 
