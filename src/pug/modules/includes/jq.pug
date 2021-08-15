@@ -118,14 +118,6 @@
               .card__info.card__info--prop a:not(:last-child) :not(.flex-row-reverse) :first-child  :last-child    :nth-child( )  :nth-child-last( )  :only-child  :only-of-type   :first-of-type  :last-of-type   :nth-first-of-type( )  :nth-last-of-type( )
               i.card__destroy.js-cart.icon-bin2 
 
-
-
-
-
-
-
-
-
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header  setTimeout
               .card__info.card__info--prop setTimeout(function () {  $(".info").addClass("info-active"); }, 200);
@@ -135,9 +127,6 @@
               .card__header  if
               .card__info.card__info--prop if (window.pageYOffset > 100) { } else { }
               i.card__destroy.js-cart.icon-bin2 
-
-        
-        
         
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header  window.onresize
@@ -154,6 +143,15 @@
               .card__info.card__info--prop $(document).mouseup(function (e){ });
               i.card__destroy.js-cart.icon-bin2 
 
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header mouseover(наведение на элемент)
+              .card__info.card__info--prop .mouseover( function (event) {   })      можно совмещать .mouseover( function (event) {   }).mouseleave( function (event) { })
+              i.card__destroy.js-cart.icon-bin2 
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header mouseleave(уход с элемента)
+              .card__info.card__info--prop .mouseleave( function (event) { })         можно совмещать .mouseover( function (event) {   }).mouseleave( function (event) { })
+              i.card__destroy.js-cart.icon-bin2 
 
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header  .scroll()
@@ -164,10 +162,6 @@
               .card__header  window.innerWidth 
               .card__info.card__info--prop window.innerWidth >= 999
               i.card__destroy.js-cart.icon-bin2 
-
-
-
-
 
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header  .remove()
@@ -201,12 +195,16 @@
               .card__info.card__info--prop .css("overflow", "visible");
               i.card__destroy.js-cart.icon-bin2 
 
+
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
-              .card__header  закрытие модал
-              .card__info.card__info--prop $(document).on("mouseup", function(e) { if ($(".popup__overlay").is(e.target)) {        }});
+              .card__header  клик вне блока
+              .card__info.card__info--prop $(document).on("mouseup", function(e) { var a =   $(".menu__item--tab")  if (!a.is(e.target) && a.has(e.target).length=== 0 ) {   }});
               i.card__destroy.js-cart.icon-bin2 
 
-
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header  закрытие модалки
+              .card__info.card__info--prop $(document).on("mouseup", function(e) { if ($(".popup__overlay").is(e.target)) {        }});
+              i.card__destroy.js-cart.icon-bin2 
 
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header  $(el).offset().top - 100;

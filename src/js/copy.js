@@ -15,8 +15,14 @@ $(document).ready(function (e) {
 // ---copytext-----
   $(".copytext").on("click", function () {
     let temp =  $(this).find(".card__info")
+    let mmm = $(this).find(" .copy-text ")
+
        copytext(
         temp
+        );  
+         
+       copytext(
+        mmm
         );   
 
     $("span.baje").addClass('active');
@@ -28,6 +34,4 @@ $(document).ready(function (e) {
   });
 // -------/copytext------------
 
-
 });  
-

@@ -24,16 +24,48 @@
 
 
 //- ===================несколько модалок на одном скрипте====================================
-section#wordpress.wordpress
-      h3 WORDPRESS
-      .wordpress__body
-          //- a(href="#!" rel="1-popup").popups-init-js выбор страницы для вывода
+section#sprite-svg.sprite-svg.section-modal
+      h3 sprite-svg
+      .section-modal__body
+          a(href="#!" rel="sprite-svg-popup").popups-init-js как делать sprite svg
           //- a(href="#!" rel="2-popup").popups-init-js вывод цикла записей
           //- a(href="#!" rel="3-popup").popups-init-js открыть 3 попап
           //- a(href="#!" rel="4-popup").popups-init-js открыть 4 попап
 
 
 
+section#wordpress.wordpress.section-modal
+      h3 WORDPRESS
+      .section-modal__body
+          //- a(href="#!" rel="1-popup").popups-init-js выбор страницы для вывода
+          //- a(href="#!" rel="2-popup").popups-init-js вывод цикла записей
+          //- a(href="#!" rel="3-popup").popups-init-js открыть 3 попап
+          //- a(href="#!" rel="4-popup").popups-init-js открыть 4 попап
+
+
+section#modaL.modaL
+  #sprite-svg-popup.popups
+      .popups__overlay
+        .popups__inner
+          i.icon-close21.popup__close.close-js
+          .popups__line
+              p 1. заводим файл sprite.svg в папку img
+              .m10
+              p 2. копируем svg как файл с макета в папку dounloads на компьютере
+              .m10
+              p 3. переименовываем картинки , открывая их двойным щелчком. смотрим, чтобы названия соответствовали месту в макете
+              .m10
+              p 4. открываем генератор спрайтов https://svgsprit.es
+              .m10
+              p 5. генерируем спрайт и заводим его в свой файл
+              .m10
+              p 6. выводим нужный svg в верстку   
+              .copytext
+                .fz.copy-text
+                  p svg.icon-line 
+                  <br>
+                  p use(xlink:href='/assets/img/sprite.svg#i-line-3')
+              p 7. делаем отдельную линию и туда выводим все иконк для наглядности
 section#modaL.modaL
   #1-popup.popup.popups
       .popups__overlay
@@ -52,8 +84,6 @@ section#modaL.modaL
               .copytext    
                 .card__info.fz if (get_page_by_path("how-we-work")->ID == get_the_ID()) { }else{}
           
-
- 
 
   #2-popup.popup.popups
       .popups__overlay
