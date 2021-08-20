@@ -1,29 +1,12 @@
 
+section#sprite-svg.sprite-svg.section-modal
+      h3 JS
+      .section-modal__body
+          a(href="#!" rel="delegation").popups-init-js делегирование событий
+          //- a(href="#!" rel="2-popup").popups-init-js вывод цикла записей
+          //- a(href="#!" rel="3-popup").popups-init-js открыть 3 попап
+          //- a(href="#!" rel="4-popup").popups-init-js открыть 4 попап
 
-
-//- hr 
-//- h2(style="padding: 0 0 20px 0	") popup
-
-
-
-
-
-
-
-//- //- одиночная модалка===================
-//- button.btn.btn--success(type='button').btn-popup.popup-init-js  Открыть попап
-//- .popup
-//-     .popup__overlay
-//-       .popup__inner
-//-         p одиночная модалка  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perspiciatis odit quo numquam deserunt, rerum quia rem? Unde dicta possimus ut hic perferendis mollitia asperiores iusto. Quasi reiciendis provident a consectetur at similique sit unde laborum voluptate! Ullam fuga quibusdam, ratione veritatis modi sit non, nam minima architecto nostrum labore. Esse, sint. Nobis explicabo necessitatibus laboriosam voluptatibus natus ullam optio deleniti! Error aliquid voluptates consequuntur nemo, deleniti reiciendis sunt accusantium eius illo natus dignissimos alias accusamus amet? Dolorum eveniet in eaque! Non sed praesentium veniam doloribus vitae, aut provident molestias aspernatur id velit ratione. Iusto adipisci unde mollitia ipsum ea.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perspiciatis odit quo numquam deserunt, rerum quia rem? Unde dicta possimus ut hic perferendis mollitia asperiores iusto. Quasi reiciendis provident a consectetur at similique sit unde laborum voluptate! Ullam fuga quibusdam, ratione veritatis modi sit non, nam minima architecto nostrum labore. Esse, sint. Nobis explicabo necessitatibus laboriosam voluptatibus natus ullam optio deleniti! Error aliquid voluptates consequuntur nemo, deleniti reiciendis sunt accusantium eius illo natus dignissimos alias accusamus amet? Dolorum eveniet in eaque! Non sed praesentium veniam doloribus vitae, aut provident molestias aspernatur id velit ratione. Iusto adipisci unde mollitia ipsum ea.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perspiciatis odit quo numquam deserunt, rerum quia rem? Unde dicta possimus ut hic perferendis mollitia asperiores iusto. Quasi reiciendis provident a consectetur at similique sit unde laborum voluptate! Ullam fuga quibusdam, ratione veritatis modi sit non, nam minima architecto nostrum labore. Esse, sint. Nobis explicabo necessitatibus laboriosam voluptatibus natus ullam optio deleniti! Error aliquid voluptates consequuntur nemo, deleniti reiciendis sunt accusantium eius illo natus dignissimos alias accusamus amet? Dolorum eveniet in eaque! Non sed praesentium veniam doloribus vitae, aut provident molestias aspernatur id velit ratione. Iusto adipisci unde mollitia ipsum ea.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perspiciatis odit quo numquam deserunt, rerum quia rem? Unde dicta possimus ut hic perferendis mollitia asperiores iusto. Quasi reiciendis provident a consecte
-//-         i.icon-x.popup__close.popup__close
-
-
-
-
-
-
-//- ===================несколько модалок на одном скрипте====================================
 section#sprite-svg.sprite-svg.section-modal
       h3 sprite-svg
       .section-modal__body
@@ -43,6 +26,53 @@ section#wordpress.wordpress.section-modal
           //- a(href="#!" rel="4-popup").popups-init-js открыть 4 попап
 
 
+section#modaL.modaL
+  #delegation.popups
+      .popups__overlay
+        .popups__inner
+          i.icon-close21.popup__close.close-js
+          .popups__line
+              p(style="color: DeepSkyBlue") pug
+              .m10
+              p section#training.training
+              p .container
+              p ul 
+              p   li first
+              p   li second
+              p   li fird
+              button.button(type="text") Добавить li 
+              .m10
+              p(style="color: DeepSkyBlue") JS
+              .m10
+              p  const MyTraining = () => {
+              p    var ul =  document.querySelector("ul");
+              p    let but =  document.querySelector(".button");
+              p  
+              p    let array = ul.childNodes;
+              p    array.forEach((cell)=>{  
+              p      cell.addEventListener('click', function(event){
+              p        console.log(event.target.innerHTML); 
+              p      });
+              p      })
+              p  
+              p      ul.addEventListener('click', function(event){
+              p      let et =   event.target
+              p  if (et.tagName == 'LI') {
+              p    console.log(et.innerHTML); 
+              p    et.style.backgroundColor = "red"
+              p  }
+              p      }); 
+              p  
+              p      const foo = function(){
+              p       let LiNew = document.createElement('li');
+              p       LiNew.innerHTML = " новый"
+              p        ul.append(LiNew)
+              p        }
+              p  
+              p      but.addEventListener('click',   foo);
+              p    };MyTraining();
+              p(style="color: DeepSkyBlue") comments 
+              p главное  -- событие по родителю сработает на каждом потомке. чтобы отличить родителя от потомка вводится условие.
 section#modaL.modaL
   #sprite-svg-popup.popups
       .popups__overlay

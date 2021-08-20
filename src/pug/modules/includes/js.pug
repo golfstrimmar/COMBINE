@@ -139,6 +139,28 @@
               .card__header  .remove
               .card__info.card__info--prop .remove();
               i.card__destroy.js-cart.icon-bin2
+      
+         
+            .list__card.card.js-card.js-card-grid(draggable="true").copytext
+              .card__header setTimeout
+              .card__info.card__info--prop    function activeInfo() { info.classList.add("info-active") }  setTimeout(activeInfo, 200);
+              i.card__destroy.js-cart.icon-bin2
+
+            .list__card.card.js-card.js-card-grid(draggable="true").copytext
+              .card__header  массив из дочерних элементов
+              .card__info.card__info--prop .childNodes;
+              i.card__destroy.js-cart.icon-bin2
+     
+            .list__card.card.js-card.js-card-grid(draggable="true").copytext
+              .card__header  перебор массива  из дочерних элементов
+              .card__info.card__info--prop   
+                p let array = ul.childNodes;
+                p array.forEach((cell)=>{  
+                p cell.addEventListener('click', function(event){
+                p console.log(event.target.innerHTML); 
+                p });
+                p })
+              i.card__destroy.js-cart.icon-bin2
      
     
          

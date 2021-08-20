@@ -99,7 +99,7 @@ const DragAndDropMy = () => {
     //     this.classList.remove('hovered');
     // }
 
-
+// ---------------------------------------
     const dragDrop = function(){
     // из глобальной переменной достаем содержимое. то есть drop карточку
     var cardHTML = cardAct.innerHTML;
@@ -109,29 +109,20 @@ const DragAndDropMy = () => {
     p.setAttribute("draggable", "true");
     p.innerHTML = cardHTML;
 
-    // -----------------------------------
-    // находит корзину
     var destroy = p.querySelector(".js-cart");
-    // проявляет корзину
     destroy.style.opacity = "1";
 
-    // ожидание клика по корзине
       destroy.addEventListener('click', function (){
         p.remove();
       });
 
-
-    // ---------------------------------------
-
     var info = p.querySelector(".card__info");
     info.style.cssText="font-size: 10px;color: lime;"
-
-    // добавление новой карточки в нужную область
     this.append(p);
-
     
     }
 
+// --------------------
 
     cells.forEach((cell)=>{
         cell.addEventListener('dragover', dragOver);
