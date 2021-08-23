@@ -103,10 +103,7 @@
               .card__info.card__info--prop .textContent
               i.card__destroy.js-cart.icon-bin2
 
-            .list__card.card.js-card.js-card-grid(draggable="true").copytext
-              .card__header childNodes 
-              .card__info.card__info--prop Выведем содержимое первого узла:&#45;  console.log(parent.childNodes[0].textContent);
-              i.card__destroy.js-cart.icon-bin2
+
 
          
             .list__card.card.js-card.js-card-grid(draggable="true").copytext
@@ -143,28 +140,18 @@
          
             .list__card.card.js-card.js-card-grid(draggable="true").copytext
               .card__header setTimeout
-              .card__info.card__info--prop    function activeInfo() { info.classList.add("info-active") }  setTimeout(activeInfo, 200);
+              .card__info.card__info--prop     setTimeout(()=>{    }, 200);
               i.card__destroy.js-cart.icon-bin2
 
-            .list__card.card.js-card.js-card-grid(draggable="true").copytext
-              .card__header  массив из дочерних элементов
-              .card__info.card__info--prop .childNodes;
-              i.card__destroy.js-cart.icon-bin2
-     
-            .list__card.card.js-card.js-card-grid(draggable="true").copytext
-              .card__header  перебор массива  из дочерних элементов
-              .card__info.card__info--prop   
-                p let array = ul.childNodes;
-                p array.forEach((cell)=>{  
-                p cell.addEventListener('click', function(event){
-                p console.log(event.target.innerHTML); 
-                p });
-                p })
-              i.card__destroy.js-cart.icon-bin2
-     
-    
-         
+
+
             .list__card.card.js-card.js-card-grid(draggable="true").copytext
               .card__header  forEach
               .card__info.card__info--prop .forEach((cell)=>{    })
+              i.card__destroy.js-cart.icon-bin2
+
+            .list__card.card.js-card.js-card-grid(draggable="true").copytext
+              .card__header  for
+              .card__info.card__info--prop for (var i = 0; i < .length; ++i) {  }
+
               i.card__destroy.js-cart.icon-bin2

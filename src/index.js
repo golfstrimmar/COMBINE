@@ -1,15 +1,13 @@
-import $ from 'jquery';
-// import Plyr from "plyr";
 
 // ==============================================
 
 // import "mixitup";
 // import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
 
-
+import $ from 'jquery';
 import './js/common'
 import './js/copy'
-import './js/training'
+
 // import './js/scrolling'
 // import './js/first'
 // import './js/header'
@@ -21,7 +19,7 @@ import './js/modal'
 // import './js/contacts'
 // import "./js/polzunki";
 
-
+// import './js/training'
 
 // bootstrap;
 // import "bootstrap";

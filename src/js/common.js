@@ -160,7 +160,7 @@ items.forEach((item)=>{
         //    console.log(rem)
             } 
 
-    rem.addEventListener('click', Close );
+    // rem.addEventListener('click', Close );
         
 })
 
@@ -239,125 +239,125 @@ const AddMyCol1 = () => {
 // ------------------------------------------------------------
 // -------------------------img--------------------------------
 
-const imgChange = () => {
-
-    let card = document.querySelector('.js-card-img'); 
-    let inputCard = document.querySelector('.js-input-img-class'); 
-    let val =  inputCard.value
-    let img = card.querySelector('.js-img');
-    // let outcome = img.getAttribute("class");
-
-    inputCard.onchange = function() {
-    val = inputCard.value;
-    img.setAttribute("class", val);
-    card.querySelector('span').innerHTML = val; 
-  }
-
- }
-imgChange();
+// const imgChange = () => {
+//
+//     let card = document.querySelector('.js-card-img');
+//     let inputCard = document.querySelector('.js-input-img-class');
+//     let val =  inputCard.value
+//     let img = card.querySelector('.js-img');
+//     // let outcome = img.getAttribute("class");
+//
+//     inputCard.onchange = function() {
+//     val = inputCard.value;
+//     img.setAttribute("class", val);
+//     card.querySelector('span').innerHTML = val;
+//   }
+//
+//  }
+// imgChange();
 
 
 // -------------------------title---------------------------------
 
-const titleChange = () => {
-
-    let card = document.querySelector('.js-card-title'); 
-    let inputCard = document.querySelector('.js-input-title'); 
-    let val =  inputCard.value
-    let h2 = card.querySelector('h2');
-
-    inputCard.onchange = function() {
-    val = inputCard.value;
-    h2.innerHTML = val;
-  }
-
- }
-titleChange();
-// -------
-
-
-const titleChangeClass = () => {
-
-    let card = document.querySelector('.js-card-title'); 
-    let inputCard = document.querySelector('.js-input-title-class'); 
-    
-    let div = card.querySelector('.title');
-
-    inputCard.onchange = function() {
-        let val =  inputCard.value
-        div.setAttribute("class", val);
-        card.querySelector('.monitor-class ').innerHTML = val; 
-  }
-
- }
-titleChangeClass();
-
-
-// ------------------------text---------------------------------
-const textChange = () => {
-
-    let card = document.querySelector('.js-card-text'); 
-    let inputCard = document.querySelector('.js-input-text'); 
-    let val =  inputCard.value
-    let p = card.querySelector('p');
-
-    inputCard.onchange = function() {
-    val = inputCard.value;
-    p.innerHTML = val;
-  }
-
- }
- textChange();
-// -------
-
-
-const textChangeClass = () => {
-
-    let card = document.querySelector('.js-card-text'); 
-    let inputCard = document.querySelector('.js-input-text-class'); 
-    
-    let div = card.querySelector('.text');
-
-    inputCard.onchange = function() {
-        let val =  inputCard.value
-        div.setAttribute("class", val);
-        card.querySelector('.monitor-class ').innerHTML = val; 
-  }
-
- }
- textChangeClass();
-
-
-// -------------------------button--------------------------------
-const buttonChange = () => {
-
-    let card = document.querySelector('.js-card-button'); 
-    let inputCard = document.querySelector('.js-input-button'); 
-    let a = card.querySelector('a');
-
-    inputCard.onchange = function() {
-        let val = inputCard.value;
-    a.innerHTML = val;
-  }
-
- }
- buttonChange();
+// const titleChange = () => {
+//
+//     let card = document.querySelector('.js-card-title');
+//     let inputCard = document.querySelector('.js-input-title');
+//     let val =  inputCard.value
+//     let h2 = card.querySelector('h2');
+//
+//     inputCard.onchange = function() {
+//     val = inputCard.value;
+//     h2.innerHTML = val;
+//   }
+//
+//  }
+// titleChange();
 // // -------
 
 
-const buttonChangeClass = () => {
+// const titleChangeClass = () => {
+//
+//     let card = document.querySelector('.js-card-title');
+//     let inputCard = document.querySelector('.js-input-title-class');
+//
+//     let div = card.querySelector('.title');
+//
+//     inputCard.onchange = function() {
+//         let val =  inputCard.value
+//         div.setAttribute("class", val);
+//         card.querySelector('.monitor-class ').innerHTML = val;
+//   }
+//
+//  }
+// titleChangeClass();
 
-    let card = document.querySelector('.js-card-button'); 
-    let inputCardclass = document.querySelector('.js-input-button-class'); 
-    
-    let div = card.querySelector('a');
 
-    inputCardclass.onchange = function() {
-        let val =  inputCardclass.value
-        div.setAttribute("class", val);
-        card.querySelector('.monitor-class ').innerHTML = val; 
-  }
+// // ------------------------text---------------------------------
+// const textChange = () => {
+//
+//     let card = document.querySelector('.js-card-text');
+//     let inputCard = document.querySelector('.js-input-text');
+//     let val =  inputCard.value
+//     let p = card.querySelector('p');
+//
+//     inputCard.onchange = function() {
+//     val = inputCard.value;
+//     p.innerHTML = val;
+//   }
+//
+//  }
+//  textChange();
+// -------
 
- }
- buttonChangeClass();
+
+// const textChangeClass = () => {
+//
+//     let card = document.querySelector('.js-card-text');
+//     let inputCard = document.querySelector('.js-input-text-class');
+//
+//     let div = card.querySelector('.text');
+//
+//     inputCard.onchange = function() {
+//         let val =  inputCard.value
+//         div.setAttribute("class", val);
+//         card.querySelector('.monitor-class ').innerHTML = val;
+//   }
+//
+//  }
+//  textChangeClass();
+
+
+// // -------------------------button--------------------------------
+// const buttonChange = () => {
+//
+//     let card = document.querySelector('.js-card-button');
+//     let inputCard = document.querySelector('.js-input-button');
+//     let a = card.querySelector('a');
+//
+//     inputCard.onchange = function() {
+//         let val = inputCard.value;
+//     a.innerHTML = val;
+//   }
+//
+//  }
+//  buttonChange();
+// // -------
+
+
+// const buttonChangeClass = () => {
+//
+//     let card = document.querySelector('.js-card-button');
+//     let inputCardclass = document.querySelector('.js-input-button-class');
+//
+//     let div = card.querySelector('a');
+//
+//     inputCardclass.onchange = function() {
+//         let val =  inputCardclass.value
+//         div.setAttribute("class", val);
+//         card.querySelector('.monitor-class ').innerHTML = val;
+//   }
+//
+//  }
+//  buttonChangeClass();
 

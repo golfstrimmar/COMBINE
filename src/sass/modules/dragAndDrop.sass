@@ -1,400 +1,407 @@
 
 .dd
-  background: lighten($active, 30%)
-  min-height: 100vh
-  margin: 20px 5px 0
-  padding: 0 0 100px 0
-  h6
-    background: #9457EB
-    width: 100%
-    +jucc
+	background: lighten($active, 30%)
+	min-height: 100vh
+	margin: 20px 5px 0
+	padding: 0 0 100px 0
+
+	h6
+		background: #9457EB
+		width: 100%
+		+jucc
 
 .dd__body
-  display: grid
-  grid-template-columns: 1fr 1fr
-  grid-template-rows: 1fr auto
-  column-gap: 20px
-  row-gap: 10px
+	display: grid
+	grid-template-columns: 1fr
+	grid-template-rows: 1fr auto
+	row-gap: 10px
+	padding: 0 300px 0 0
+	position: relative
+
 .list__card
-  form
-    position: absolute
-    width: 100%
-    z-index: 10000
+	form
+		position: absolute
+		width: 100%
+		z-index: 10000
 
 .list__items
-  width: 100%
-  grid-column: 1/3
-  display: grid
-  grid-template-columns: 10% 1fr 1fr 1fr
-  position: relative
-  margin: 0 0 0 30px
+	width: calc(100%)
+	grid-column: 1/3
+	display: grid
+	grid-template-columns: 10% 1fr 1fr 1fr
+	position: relative
 
 .list__items--properties
-  grid-template-columns: repeat(auto-fill,minmax(131px,1fr))
-  column-gap: 2px
-  row-gap: 2px
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
+	column-gap: 2px
+	row-gap: 2px
 
 .card__header
-  display: grid
-  grid-template-columns: 10%  1fr
-  font-size: 14px
+	display: grid
+	grid-template-columns: 10%  1fr
+	font-size: 14px
 
 .card__info
-  .title
-    h2
-      font-size: 15px!important
-      height: 15px
+	.title
+		h2
+			font-size: 15px !important
+			height: 15px
 
 .list__cell
-    +border(1px, red )
-    +br
-    background: lighten($active,  35%)
-    min-height: 20vh
+	+border(1px, red)
+	+br
+	background: lighten($active, 35%)
+	min-height: 100%
 
 
 .list__card
-    +pro
-    display: grid
-    grid-template-rows: 1fr
-    min-height: 40px
-    max-height: 150px
-    +border(1px, red )
-    +br
-    background: lighten(#99CCFF, 20%)
-    position: relative
+	+pro
+	display: grid
+	grid-template-rows: 1fr
+	min-height: 40px
+	max-height: 150px
+	+border(1px, red)
+	+br
+	background: lighten(#99CCFF, 20%)
+	position: relative
 
 .card__header
-  font-weight: 400
-  +bg(blue)
-  color: white
-  padding: 5px
-  text-align: center
-  +center
-  box-shadow: 0 0 7px rgba(0,0,0, 1), inset 0 0 7px rgba(0,0,0, 1)
-  text-shadow: 0 0  8px rgba(0,0,0, 1)
+	font-weight: 400
+	+bg(blue)
+	color: white
+	padding: 5px
+	text-align: center
+	+center
+	box-shadow: 0 0 7px rgba(0, 0, 0, 1), inset 0 0 7px rgba(0, 0, 0, 1)
+	text-shadow: 0 0 8px rgba(0, 0, 0, 1)
 
 .card__info
-  padding: 5px
-  text-align: center
-  font-size: 0
+	padding: 5px
+	text-align: center
+	font-size: 0
 
 .card__info--prop
-  padding: 0 0 0 0
+	padding: 0 0 0 0
 
 .hide
-  display: none
+	display: none
+
 .hovered
-  background: lighten(lime, 30%)
+	background: lighten(lime, 30%)
 
 .act
-  background: lighten(lime, 10%)
+	background: lighten(lime, 10%)
 
 .list__cart
-    +border(1px, #000)
-    +br
-    background: lighten(#000, 90%)
-    +center
-    max-height: 50px
+	+border(1px, #000)
+	+br
+	background: lighten(#000, 90%)
+	+center
+	max-height: 50px
 
 .card__destroy
-  font-size: 20px
-  color: #20B2AA
-  cursor: pointer
-  width: 20px
-  height: 20px
-  position: absolute
-  left: 10px
-  bottom: 10px
-  opacity: 0
+	font-size: 20px
+	color: #20B2AA
+	cursor: pointer
+	width: 20px
+	height: 20px
+	position: absolute
+	left: 10px
+	bottom: 10px
+	opacity: 0
 
 .list__cell--column
-  display: grid
-  grid-template-rows: repeat(auto-fill, 100px)
-  background: lighten(#FF6600,20%)
+	background: lighten(#FF6600, 20%)
 
-.list__cell--row
-  display: grid
-  background: lighten(#0000FF,20%)
-  grid-auto-flow: column
-  grid-template-columns: repeat(auto-fill, 100px )
-
-// .list__items
-//   .list__card
-//     max-height: 30px
 
 .list__cell
-  position: relative
-  i
-    opacity: 1
+	position: relative
+	margin: 5px 0 0 0
+
+	i
+		opacity: 1
 
 .list__canvas
-  display: grid
-  grid-auto-flow: column
-  margin: 60px 0 0 0
+	position: absolute
+	right: 0
+	top: 0
+	height: 100%
+	width: 290px
+	display: grid
+
 
 .canvas__item
-  display: grid
-  position: relative
+	position: relative
 
-.list__cell--common
-  grid-template-columns: 100px
+
 
 .js-card-used
-  min-width: 100px
-  min-height: 100px
+	min-width: 100px
+	min-height: 100px
 
-.close
-  position: absolute
-  top: -35px
-  width: 30px
-  height: 30px
-  color: #000
-  z-index: 2
-  left: 35%
-  transform: translate(-50%)
-  +br50
-  +border(1px, green)
-  +center
-  &:hover
-    cursor: pointer
+//.close
+//  position: absolute
+//  top: -35px
+//  width: 30px
+//  height: 30px
+//  color: #000
+//  z-index: 2
+//  left: 35%
+//  transform: translate(-50%)
+//  +br50
+//  +border(1px, green)
+//  +center
+//  &:hover
+//    cursor: pointer
 
 .list__cell
-  position: relative
-  .close-sell
-    opacity: .4
-    position: absolute
-    bottom: 2px
-    cursor: pointer
+	position: relative
+
+	.close-sell
+		opacity: .4
+		position: absolute
+		bottom: 2px
+		cursor: pointer
 
 .addCol
-  position: absolute
-  top: -55px
-  width: 100%
-  height: 50px
-  color: #000
-  z-index: 2
-  left: 50%
-  transform: translate(-50%)
-  +br
-  +border(1px, green)
-  +center
-  box-shadow: inset 0 0 15px rgb(0,0,0, .4)
-  border: none
-  transition: all .2s ease-in-out
-  +bg(#33CC00)
-  &:hover
-    cursor: pointer
-    border: none
-    box-shadow: inset 0 0 15px rgb(0,0,0, .8)
+	width: 100%
+	height: 50px
+	color: #000
+	z-index: 2
+	+br
+	+border(1px, green)
+	+center
+	box-shadow: inset 0 0 15px rgb(0, 0, 0, .4)
+	border: none
+	transition: all .2s ease-in-out
+	+bg(#33CC00)
+
+	&:hover
+		cursor: pointer
+		border: none
+		box-shadow: inset 0 0 15px rgb(0, 0, 0, .8)
+
 .card__info
-  p
-    font-size: 12px
-    height: 15px
+	p
+		font-size: 12px
+		height: 15px
+
 .card__info
-  img
-    width: 50px
-    // height: 0px
+	img
+		width: 50px
+// height: 0px
 
 .product
-  +bg(white)
-  box-shadow: 0 0 5px rgb(0,0,0, .4)
-  +br
-  margin: 60px 0 0 0
-  padding: 20px
+	+bg(white)
+	box-shadow: 0 0 5px rgb(0, 0, 0, .4)
+	+br
+	margin: 60px 0 0 0
+	padding: 20px
 
 #product
-  position: relative
-
+	position: relative
 
 
 .close-product
-  position: absolute
-  right: 0px
-  top: 5px
-  width: 100%
-  max-width: 950px
-  height: 50px
-  +center
-  +br
-  box-shadow: inset 0 0 15px rgba(0,0,0, .4)
-  +bg(#FF0033)
-  cursor: pointer
-  transition: all .2s ease-in-out
-  &:hover
-    box-shadow: inset 0 0 15px rgba(0,0,0, .8)
+	position: absolute
+	right: 0
+	top: 5px
+	width: 100%
+	height: 50px
+	+center
+	+br
+	box-shadow: inset 0 0 15px rgba(0, 0, 0, .4)
+	+bg(#FF0033)
+	cursor: pointer
+	transition: all .2s ease-in-out
+
+	&:hover
+		box-shadow: inset 0 0 15px rgba(0, 0, 0, .8)
 
 .my-form
-  grid-column: 1/3
+	grid-column: 1/3
 
 .card-input
-  +bg(white )
-  box-shadow: 0 0 5px #000
-  +br
-  width: 100%
-  height: 30px
-  padding: 0 0 0 10px
-  margin: 5px 0 10px 10px
-  cursor: pointer
+	+bg(white)
+	box-shadow: 0 0 5px #000
+	+br
+	width: 100%
+	height: 30px
+	padding: 0 0 0 10px
+	margin: 5px 0 10px 10px
+	cursor: pointer
 
 .card__button
-  width: 50px
-  height: 50px
-  +br50
-  margin: 20px auto 0
-  box-shadow: inset 0 0 15px rgb(0,0,0, .4)
-  border: none
-  &:hover
-    cursor: pointer
-    border: none
-    box-shadow: inset 0 0 15px rgb(0,0,0, .8)
+	width: 50px
+	height: 50px
+	+br50
+	margin: 20px auto 0
+	box-shadow: inset 0 0 15px rgb(0, 0, 0, .4)
+	border: none
+
+	&:hover
+		cursor: pointer
+		border: none
+		box-shadow: inset 0 0 15px rgb(0, 0, 0, .8)
 
 .monitor-class
-  font-size: 14px
-  margin: 5px 0 0 0
+	font-size: 14px
+	margin: 5px 0 0 0
 
 .my-form__item
-  +br
-  box-shadow: 0 0 5px rgba(0,0,0, .4)
-  margin: 0 5px 10px
-  padding: 0 5px
-  +bg(rgba(0,0,0, .4))
-  display: grid
-  grid-template-columns: repeat(auto-fill, 45%)
-  column-gap: 20px
-  label
-    font-size: 15px
-    color: #33FF33
+	+br
+	box-shadow: 0 0 5px rgba(0, 0, 0, .4)
+	margin: 0 5px 10px
+	padding: 0 5px
+	+bg(rgba(0, 0, 0, .4))
+	display: grid
+	grid-template-columns: repeat(auto-fill, 45%)
+	column-gap: 20px
+
+	label
+		font-size: 15px
+		color: #33FF33
 
 .text
-  font-size: 15px
-  height: 30px
+	font-size: 15px
+	height: 30px
 
 .card__info
-  a
-    height: 30px
-    // color: white
-    font-size: 15px
+	a
+		height: 30px
+		// color: white
+		font-size: 15px
 
 .custom__img
-  position: relative
-  padding: 0 0 150px 0
-  width: 100px
+	position: relative
+	padding: 0 0 150px 0
+	width: 100px
 
 .custom__soc
-  display: grid
-  grid-template-columns: repeat(3, 30px)
-  column-gap: 15px
+	display: grid
+	grid-template-columns: repeat(3, 30px)
+	column-gap: 15px
+
 .soc__button
-  +br50
-  +border(1px, #000)
-  +center
-  width: 30px
-  height: 30px
-  font-size: 14px
-  &:hover
-    box-shadow: 0 0 8px rgba(0,0,0, .5)
+	+br50
+	+border(1px, #000)
+	+center
+	width: 30px
+	height: 30px
+	font-size: 14px
+
+	&:hover
+		box-shadow: 0 0 8px rgba(0, 0, 0, .5)
+
 .baje
-  box-shadow: 0 0 8px rgba(0,0,0, .5)
-  text-shadow: 0 0 3px rgba(0,0,0, 1)
-  padding: 10px
-  position: absolute
-  top: 100px
-  left: 50%
-  border-radius: 20px
-  font-size: 15px
-  opacity: 0
-  transition: all .2s ease-in-out
-  transform: translateX(-50%) scale(.5)
+	box-shadow: 0 0 8px rgba(0, 0, 0, .5)
+	text-shadow: 0 0 3px rgba(0, 0, 0, 1)
+	padding: 10px
+	position: absolute
+	top: 100px
+	left: 50%
+	border-radius: 20px
+	font-size: 15px
+	opacity: 0
+	transition: all .2s ease-in-out
+	transform: translateX(-50%) scale(.5)
 
 
-  &.active
-    transform: translateX(-50%) scale(1)
-    background: #CCCCCC
-    color: white
-    box-shadow: inset 0 0 10px rgb(0,0,0,.8)
-    opacity: .6
+	&.active
+		transform: translateX(-50%) scale(1)
+		background: #CCCCCC
+		color: white
+		box-shadow: inset 0 0 10px rgb(0, 0, 0, .8)
+		opacity: .6
 
 
-.list__items--properties-grid 
-  .card__header
-    background: #3399FF
+.list__items--properties-grid
+	.card__header
+		background: #3399FF
 
 
 .card--font
-  .card__header
-    background:  #00CCFF
+	.card__header
+		background: #00CCFF
 
 
 .card--size
-  .card__header
-    background: #3366FF
+	.card__header
+		background: #3366FF
 
 
 .card--border
-  .card__header
-    background: #9999FF
+	.card__header
+		background: #9999FF
 
 .card--mix
-  .card__header
-    background: #000066
+	.card__header
+		background: #000066
 
 .card--abs
-  .card__header
-    background: #6600FF
+	.card__header
+		background: #6600FF
+
 .card--nth
-  .card__header
-    background: SteelBlue
+	.card__header
+		background: SteelBlue
 
 .list__items--properties-js
-  .card__header
-    background: DarkSlateGray
+	.card__header
+		background: DarkSlateGray
 
 .list__items--properties-jq
-  .card__header
-    background: LightSlateGray
+	.card__header
+		background: LightSlateGray
 
 .list__items--properties-sass
-  
-  .card__header
-    background: Brown
+
+	.card__header
+		background: Brown
 
 
 .card__cheap
-  position: absolute
-  top: 0px
-  left: -30px
-  padding: 5px 
-  border: 1px solid DimGray
-  background: SlateGray
-  box-shadow: inset 0 0 8px rgba(0,0,0, 1)
-  font-size:  12px
-  border-radius: 5px
-  +fdc
-  color: white
-  z-index: 2
-  p
-    line-height: 1
+	position: absolute
+	top: 0px
+	left: -30px
+	padding: 5px
+	border: 1px solid DimGray
+	background: SlateGray
+	box-shadow: inset 0 0 8px rgba(0, 0, 0, 1)
+	font-size: 12px
+	border-radius: 5px
+	+fdc
+	color: white
+	z-index: -2
+
+	p
+		line-height: 1
 
 .section-modal
-  background: SlateBlue
-  color:  white
-  padding: 0 0 100px 0
-  
-  h3
-    text-align: center
-    margin: 0 auto
-    display: block
-    background: indigo
-    text-shadow: 0 0 8px rgba(0,0,0, 1)
-    padding: 5px 0
+	background: SlateBlue
+	color: white
+	padding: 10px 0
+
+	h3
+		text-align: center
+		margin: 0 auto
+		display: block
+		background: indigo
+		text-shadow: 0 0 8px rgba(0, 0, 0, 1)
+		padding: 5px 0
 
 .section-modal__body
-  padding: 0 20px
-  a
-    color:  rgba(225,225,225, 1)
-    text-shadow: 0 0 8px rgba(0,0,0, 1)
-    margin: 10px 0
-    background: BlueViolet
-    padding: 3px 0 3px 5px
-    &:hover
-      background: lighten(BlueViolet, 20%)
+	padding: 0 20px
+
+	a
+		color: rgba(225, 225, 225, 1)
+		text-shadow: 0 0 8px rgba(0, 0, 0, 1)
+		margin: 10px 0
+		background: BlueViolet
+		padding: 3px 0 3px 5px
+
+		&:hover
+			background: lighten(BlueViolet, 20%)
+
+
+

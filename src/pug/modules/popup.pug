@@ -1,32 +1,107 @@
 
-section#sprite-svg.sprite-svg.section-modal
+section#sprite-svg.section-modal
       h3 JS
       .section-modal__body
           a(href="#!" rel="delegation").popups-init-js делегирование событий
-          //- a(href="#!" rel="2-popup").popups-init-js вывод цикла записей
-          //- a(href="#!" rel="3-popup").popups-init-js открыть 3 попап
-          //- a(href="#!" rel="4-popup").popups-init-js открыть 4 попап
-
-section#sprite-svg.sprite-svg.section-modal
-      h3 sprite-svg
-      .section-modal__body
-          a(href="#!" rel="sprite-svg-popup").popups-init-js как делать sprite svg
-          //- a(href="#!" rel="2-popup").popups-init-js вывод цикла записей
-          //- a(href="#!" rel="3-popup").popups-init-js открыть 3 попап
-          //- a(href="#!" rel="4-popup").popups-init-js открыть 4 попап
+          a(href="#!" rel="cycle").popups-init-js добавление из js --файла стилей в шапку и работа со стилями
+          a(href="#!" rel="children").popups-init-js работа с массивом потомков
+          a(href="#!" rel="infinityCount").popups-init-js бесконечный счетчик
 
 
 
 section#wordpress.wordpress.section-modal
       h3 WORDPRESS
       .section-modal__body
-          //- a(href="#!" rel="1-popup").popups-init-js выбор страницы для вывода
-          //- a(href="#!" rel="2-popup").popups-init-js вывод цикла записей
-          //- a(href="#!" rel="3-popup").popups-init-js открыть 3 попап
-          //- a(href="#!" rel="4-popup").popups-init-js открыть 4 попап
+           a(href="#!" rel="1-popup").popups-init-js выбор страницы для вывода
+           a(href="#!" rel="2-popup").popups-init-js вывод цикла записей
+
+//==========js==========
+
+section#modaL-8.modaL
+  #infinityCount.popups
+      .popups__overlay
+        .popups__inner
+          i.icon-close21.popup__close.close-js
+          .popups__line
+            p(style="background:  Crimson;  margin: 20px 0 5px;") счетчик работает бесконечно и внутри бесконечно вызывается функция. подходит например для слайдера с автосменой слайдов.
+            p (function main(counter){
+            p drowLeft();
+            p setTimeout(main,5000);
+            p })
+            p (0);
+
+section#modaL-7.modaL
+  #children.popups
+      .popups__overlay
+        .popups__inner
+          i.icon-close21.popup__close.close-js
+          .popups__line
+
+                p(style="background:  Crimson;  margin: 20px 0 5px;") получение именно массива потомков. можно применять все методы для массивов
+                p   let infinity = document.querySelector('.infinity');
+                p   let singles = Array.prototype.slice.call(infinity.childNodes);
+
+                p(style="background:  DarkSalmon;  margin: 20px 0 5px;") получение псевдомассива  потомков
+                p var children = document.querySelector('wrap').children;
+
+                p(style="background:  DarkSalmon;margin: 20px 0    5px;") или
+                p var children = parg.childNodes;
+                p(style="background:  DarkSalmon; margin: 20px 0   5px;")  выведем содержимое первого узла псевдомассива массива потомков
+                p  console.log(parent.childNodes[0].textContent);
+                p(style="background:  DarkSalmon; margin: 20px 0   5px;") перебор псевдомассива потомков
+                p      let array = ul.childNodes;
+                p      array.forEach((cell)=>{
+                p     cell.addEventListener('click', function(event){
+                p         console.log(event.target.innerHTML);
+                p     });})
+                p(style="background:  DarkSalmon; margin: 20px 0   5px;")  сделать что-то с каждым внутренним элементом псевдомассива потомков
+                p for (var i = 0; i < children.length; ++i) { console.log(children[i]);}
+                p(style="background:  DarkSalmon; margin: 20px 0   5px;")  один из способов удалить все дочерние элементы из элемента
+                p       while (box.firstChild) {
+                p           //Список является ссылкой, то есть он будет переиндексирован перед каждым вызовом
+                p           box.removeChild(box.firstChild);
+                p   }
+                p(style="background:  DarkSalmon; margin: 20px 0   5px;") или цикл for псевдомассива потомков
+                p  var slides = document.querySelector(wrap).children;
+                p for (const item of slides){
+                p    item.classList.add("slider__item")
+                p }
 
 
-section#modaL.modaL
+
+
+
+
+
+
+
+
+
+
+
+
+section#modaL-5.modaL
+  #cycle.popups
+      .popups__overlay
+        .popups__inner
+          i.icon-close21.popup__close.close-js
+          .popups__line
+                p   addStyle(){
+                p       const style = document.createElement('style');
+                p       style.id = "new-style";
+                p       document.head.appendChild(style);
+                p   style.textContent= `
+                p       .section{
+                p       overflow: hidden;
+                p   }
+                p   .section__wrap{
+                p       display: flex;
+                p       transition: all .2s ease-in-out;
+                p   }
+                p   `
+                p   }
+
+section#modaL-6.modaL
   #delegation.popups
       .popups__overlay
         .popups__inner
@@ -73,45 +148,28 @@ section#modaL.modaL
               p    };MyTraining();
               p(style="color: DeepSkyBlue") comments 
               p главное  -- событие по родителю сработает на каждом потомке. чтобы отличить родителя от потомка вводится условие.
-section#modaL.modaL
-  #sprite-svg-popup.popups
-      .popups__overlay
-        .popups__inner
-          i.icon-close21.popup__close.close-js
-          .popups__line
-              p 1. заводим файл sprite.svg в папку img
-              .m10
-              p 2. копируем svg как файл с макета в папку dounloads на компьютере
-              .m10
-              p 3. переименовываем картинки , открывая их двойным щелчком. смотрим, чтобы названия соответствовали месту в макете
-              .m10
-              p 4. открываем генератор спрайтов https://svgsprit.es
-              .m10
-              p 5. генерируем спрайт и заводим его в свой файл
-              .m10
-              p 6. выводим нужный svg в верстку   
-              .copytext
-                .fz.copy-text
-                  p svg.icon-line 
-                  <br>
-                  p use(xlink:href='/assets/img/sprite.svg#i-line-3')
-              p 7. делаем отдельную линию и туда выводим все иконк для наглядности
-section#modaL.modaL
+
+
+
+
+
+
+
+
+// -----------------WORDPRESS----------------
+section#modaL-2.modaL
   #1-popup.popup.popups
       .popups__overlay
         .popups__inner
           i.icon-close21.popup__close.close-js
           .popups__line
               p по имени шаблона
-              .copytext    
                 .card__info.fz if( is_page_template( 'templates/template-single.php' )) {  get_template_part('./includes/bunner-single') }
           .popups__line
               p по id
-              .copytext    
                 .card__info.fz $id=15;  if( is_page($id) ) {}else{}
           .popups__line
               p по слагу страницы
-              .copytext    
                 .card__info.fz if (get_page_by_path("how-we-work")->ID == get_the_ID()) { }else{}
           
 
@@ -120,63 +178,31 @@ section#modaL.modaL
         .popups__inner
           i.icon-close21.popup__close.close-js
           .popups__line
-              p вывод записей 
-              .copytext    
-                .card__info.fz     
-                    |    global $post;
-                    |    $args = array(       
-                    |       'post_type'=>'post',
-                    |       'publish' => true,
-                    |       'numberposts' => 200,
-                    |       'category' => 41
-                    |        'p' => 129,           
-                    |        'p' => $postID  
-                    |      );
-                    |      
-                    |    $projects = get_posts($args);  
-                    |    $reversed = array_reverse($projects);
-                    |   
-                    |   if ($projects ) {
-                    |   
-                    |    foreach($reversed as $post){
-                    |      setup_postdata( $post );
-                    |      $post_id = $post->ID;
-                    |      $post_title = $post->post_title; 
-                    |      $post_text=$post->post_content;  
-                    |      $image=get_the_post_thumbnail_url($post_id, 'post');  
-                    |      $link = esc_url( get_permalink( $post_id ) );
-                    |
-                    |   the_ID();
-                    |   the_permalink();
-                    |   post_class();
-                    |   the_content();
-                    |   the_date(); 
-                    |   the_title(); 
-                    |   the_excerpt(); 
-                    |   the_post_thumbnail(); 
-                    |   next_posts_link();
-                    |   previous_posts_link();
-                    |
-                    |
-                    |     div div div div div div div div 
-                    |	 }
-                    | } else {
-                    |  `<`p`>``<`?php _e( 'Sorry, no posts matched your criteria.' ); ?`>``<`/p`>`
-                   
-                    |  }
-                    |  wp_reset_postdata();
-
-  #3-popup.popup.popups
-      .popups__overlay
-        .popups__inner
-          i.icon-close21.popup__close.close-js
-          p это 3 попап
-  #4-popup.popup.popups
-      .popups__overlay
-        .popups__inner
-          i.icon-close21.popup__close.close-js
-          p это 4 попап
-
+                p  <?php
+                p          global $post;
+                p          $args = array(
+                p          'post_type'=>'post',
+                p          'post_type'=>'cases',
+                p          'cat' => 3,
+                p          'publish' => true,
+                p          'numberposts' => 100,,
+                p          'p' => 129,            --- если выводить определенный пост
+                p          'p' => $postID         --- если выводить переменную полученную ajax
+                p          );
+                p
+                p          $projects = get_posts($args);
+                p
+                p  if ($projects ) {
+                p
+                p          foreach($projects as $post){
+                p              setup_postdata( $post );
+                p  ?>
+                p  html html html html html html html html одной записи
+                p  <?php
+                p  }
+                p  }
+                p  ?>
+                p
 
 
 

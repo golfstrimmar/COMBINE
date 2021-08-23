@@ -21,7 +21,6 @@ $(document).ready(function () {
       if ($(".popups__overlay").is(e.target)) {
         Popups.fadeOut(200);
         $("body").removeClass("lock");
-        $("body").css("overflow", "visible");
       }
     });
   });
