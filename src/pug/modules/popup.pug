@@ -57,10 +57,10 @@ section#modaL-7.modaL
                 p(style="background:  DarkSalmon; margin: 20px 0   5px;")  сделать что-то с каждым внутренним элементом псевдомассива потомков
                 p for (var i = 0; i < children.length; ++i) { console.log(children[i]);}
                 p(style="background:  DarkSalmon; margin: 20px 0   5px;")  один из способов удалить все дочерние элементы из элемента
-                p       while (box.firstChild) {
-                p           //Список является ссылкой, то есть он будет переиндексирован перед каждым вызовом
-                p           box.removeChild(box.firstChild);
-                p   }
+                p var myNode = document.getElementById("foo");
+                p while (myNode.firstChild) {
+                p     myNode.removeChild(myNode.firstChild);
+                p }
                 p(style="background:  DarkSalmon; margin: 20px 0   5px;") или цикл for псевдомассива потомков
                 p  var slides = document.querySelector(wrap).children;
                 p for (const item of slides){

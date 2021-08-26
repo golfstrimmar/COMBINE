@@ -1,6 +1,5 @@
 .list__items.list__items--properties
-            .card__cheap 
-              p Общие 
+
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header(style="text-shadow: 0 0 10px #FF0000; color:SpringGreen")
                 span opacity:
@@ -15,6 +14,11 @@
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header   &:focus
               .card__info.card__info--prop &:focus
+              i.card__destroy.js-cart.icon-bin2
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header   display: inline-block
+              .card__info.card__info--prop display: inline-block
               i.card__destroy.js-cart.icon-bin2
 
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
@@ -60,6 +64,22 @@
             .list__card.card.js-card(draggable="true").js-card-grid.copytext
               .card__header   svg-sprite
               .card__info.card__info--prop svg use(xlink:href='/assets/img/sprite.svg#i-line-3')
+              i.card__destroy.js-cart.icon-bin2
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header   a(href="#!").btn.btn--success
+              .card__info.card__info--prop a(href="#!").btn.btn--success
+              i.card__destroy.js-cart.icon-bin2
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header   nbsp;
+              .card__info.card__info--prop &nbsp;
+              i.card__destroy.js-cart.icon-bin2
+
+
+            .list__card.card.js-card(draggable="true").js-card-grid.copytext
+              .card__header   .imgs
+              .card__info.card__info--prop .imgs  img(data-src='assets/img/', alt='img')
               i.card__destroy.js-cart.icon-bin2
 
 
