@@ -8,7 +8,7 @@
 
         .list__card.card.js-card(draggable="true").js-card-grid.copytext
             .card__header   querySelector
-            .card__info.card__info--prop document.querySelector('.js-card');
+            .card__info.card__info--prop document.querySelector(' ');
             i.card__destroy.js-cart.icon-bin2
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
@@ -49,7 +49,7 @@
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
             .card__header  .style.cssText
-            .card__info.card__info--prop .style.cssText=` `
+            .card__info.card__info--prop .style.cssText= "   ";
             i.card__destroy.js-cart.icon-bin2
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
@@ -63,16 +63,9 @@
             i.card__destroy.js-cart.icon-bin2
 
 
-
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
-            .card__header  click
-            .card__info.card__info--prop .addEventListener('click', function (event) {});
-            i.card__destroy.js-cart.icon-bin2
-
-
-        .list__card.card.js-card.js-card-grid(draggable="true").copytext
-            .card__header  EventListener
-            .card__info.card__info--prop .addEventListener('click',foo);&#45;.removeEventListener('click',foo);
+            .card__header  CLICK EventListener
+            .card__info.card__info--prop .addEventListener('click',(e) =>{    });
             i.card__destroy.js-cart.icon-bin2
 
 
@@ -84,38 +77,37 @@
 
         .list__card.card.js-card(draggable="true").js-card-grid.copytext
             .card__header  const My = () =>
-            .card__info.card__info--prop const My = () => {};My();
+            .card__info.card__info--prop const My = () => { };My();
             i.card__destroy.js-cart.icon-bin2
 
 
         .list__card.card.js-card(draggable="true").js-card-grid.copytext
             .card__header  window.onload
-            .card__info.card__info--prop window.onload=function(){}
+            .card__info.card__info--prop window.onload=function(){ }
             i.card__destroy.js-cart.icon-bin2
 
-        .list__card.card.js-card(draggable="true").js-card-grid.copytext
-            .card__header   const card =
-            .card__info.card__info--prop const card =
-            i.card__destroy.js-cart.icon-bin2
 
         .list__card.card.js-card(draggable="true").js-card-grid.copytext
             .card__header   let   =
-            .card__info.card__info--prop let   =
+            .card__info.card__info--prop let   =   document.querySelector(' ');
             i.card__destroy.js-cart.icon-bin2
-
-
 
 
 
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
+              .card__header  .textContent
+              .card__info.card__info--prop .textContent = " ";
+              i.card__destroy.js-cart.icon-bin2
+
+        .list__card.card.js-card.js-card-grid(draggable="true").copytext
               .card__header  .innerHTML
-              .card__info.card__info--prop .innerHTML
+              .card__info.card__info--prop .innerHTML = " ";
               i.card__destroy.js-cart.icon-bin2
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
               .card__header  .innerText
-              .card__info.card__info--prop .innerText
+              .card__info.card__info--prop .innerText = " ";
               i.card__destroy.js-cart.icon-bin2
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
@@ -133,6 +125,17 @@
 
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
+              .card__header  .append
+              .card__info.card__info--prop .append();
+              i.card__destroy.js-cart.icon-bin2
+
+        .list__card.card.js-card.js-card-grid(draggable="true").copytext
+              .card__header  .insertBefore
+              .card__info.card__info--prop .insertBefore(newEl, Slider.firstChild)
+              i.card__destroy.js-cart.icon-bin2
+
+
+        .list__card.card.js-card.js-card-grid(draggable="true").copytext
               .card__header setTimeout
               .card__info.card__info--prop     setTimeout(()=>{    }, 200);
               i.card__destroy.js-cart.icon-bin2
@@ -141,8 +144,15 @@
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
               .card__header  Array потомков
-              .card__info.card__info--prop let singles = Array.prototype.slice.call(родитель.childNodes);
+              .card__info.card__info--prop let singles = Array.prototype.slice.call(родитель.children);
               i.card__destroy.js-cart.icon-bin2
+
+        .list__card.card.js-card.js-card-grid(draggable="true").copytext
+              .card__header   первый потомок
+              .card__info.card__info--prop .firstElementChild
+              i.card__destroy.js-cart.icon-bin2
+
+
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
               .card__header  forEach
@@ -151,15 +161,19 @@
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
               .card__header  for
-              .card__info.card__info--prop for (var i = 0; i < .length; ++i) { [i] }
+              .card__info.card__info--prop for (let i = 0; i < singles.length; ++i) {singles[i] }
 
+              i.card__destroy.js-cart.icon-bin2
+
+        .list__card.card.js-card.js-card-grid(draggable="true").copytext
+              .card__header  if
+              .card__info.card__info--prop if(){ }else{ }
               i.card__destroy.js-cart.icon-bin2
 
         .list__card.card.js-card(draggable="true").js-card-grid.copytext
             .card__header   все .query
             .card__info.card__info--prop parent.querySelector('.filmname'); &#45;  document.querySelector('.js-card');  &#45;  document.getElementById()   &#45;  document.getElementById()   &#45;  document.getElementsByTagName(имяТега)&#45;  document.getElementsByClassName() &#45;  document.querySelectorAll(selector); &#45;  document.querySelector('button'); &#45;  document.createElement(tagName); &#45;  document.getElementsByTagName(имяТега) &#45;  document.getElementsByClassName() &#45;  document.querySelectorAll(selector); &#45;  document.querySelector('button'); &#45;  document.createElement(tagName);
             i.card__destroy.js-cart.icon-bin2
-
 
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
@@ -187,7 +201,6 @@
 
 
 
-
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
             .card__header  отношение к элементу
             .card__info.card__info--prop .children;&#45;.parentElement;&#45;nextElementSibling&#45;.previousElementSibling&#45;
@@ -195,11 +208,11 @@
 
 
 
-
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
             .card__header  'dragover','drop','drop','dragend', dragOver
             .card__info.card__info--prop .addEventListener('dragover','drop','drop','dragend', dragOver);
             i.card__destroy.js-cart.icon-bin2
+
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
             .card__header  onchange
@@ -210,11 +223,6 @@
             .card__header  input
             .card__info.card__info--prop inputCard.input = function() {  }
             i.card__destroy.js-cart.icon-bin2
-
-
-
-
-
 
         .list__card.card.js-card.js-card-grid(draggable="true").copytext
             .card__header  e.preventDefault

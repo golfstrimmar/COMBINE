@@ -1,12 +1,21 @@
 
-section#sprite-svg.section-modal
+section.section-modal
       h3 JS
       .section-modal__body
+
+          a(href="#!" rel="animate").popups-init-js анимация свойств на js
+          a(href="#!" rel="innerWidth").popups-init-js событие resize у window
+          a(href="#!" rel="remove").popups-init-js удаление всех элементов с опрелеленным классом
           a(href="#!" rel="delegation").popups-init-js делегирование событий
           a(href="#!" rel="cycle").popups-init-js добавление из js --файла стилей в шапку и работа со стилями
           a(href="#!" rel="children").popups-init-js работа с массивом потомков
           a(href="#!" rel="infinityCount").popups-init-js бесконечный счетчик
 
+section.section-modal
+    h3 готовыеJS
+    .section-modal__body
+        a(href="#!" rel="tab").popups-init-js кнопка больше(одиночный таб)
+        a(href="#!" rel="modal").popups-init-js модалка одиночная.
 
 
 section#wordpress.wordpress.section-modal
@@ -17,18 +26,125 @@ section#wordpress.wordpress.section-modal
 
 //==========js==========
 
+
+section#modaL-13.modaL
+    #animate.popups
+        .popups__overlay
+            .popups__inner
+                i.icon-close21.popup__close.close-js
+                .popups__line
+                        p document.querySelector(' ').animate([
+                        p { transform: 'translate(0, 0)' },
+                        p { transform: 'translate3D(0, -300px)' }
+                        p ], {
+                        p duration: 1000,
+                        p iterations: Infinity,
+                        p easing: 'ease-in-out',
+                        p })
+
+section#modaL-12.modaL
+    #innerWidth.popups
+        .popups__overlay
+            .popups__inner
+                i.icon-close21.popup__close.close-js
+                .popups__line
+                    p window.addEventListener('resize', function(event){
+                    p if(window.innerWidth <= 768){
+                    p console.log('768')
+                    p }else{
+                    p     console.log('windowinnerWidth')
+                    p }
+                    p });
+
+section#modaL-11.modaL
+    #modal.popups
+        .popups__overlay
+            .popups__inner
+                i.icon-close21.popup__close.close-js
+                .popups__line
+                   p(style="background:  Crimson;  margin: 20px 0 5px;")
+                   p     function initPopup() {
+                   p         let pop = document.querySelector('#popup');
+                   p         let close = document.querySelector('.popup__close');
+                   p         pop.style.cssText= " display: block; opacity:1; "
+                   p         document.querySelector("body").style.cssText= "overflow: hidden"
+                   p         let overlay =  document.querySelector('.popup__overlay');
+                   p         close.addEventListener('click',(e) =>{
+                   p             pop.style.cssText= "display: none; opacity: 0;  "
+                   p             document.querySelector("body").style.cssText= "overflow: visible"
+                   p             });
+                   p         overlay.addEventListener('click',(e) =>{
+                   p             pop.style.cssText= "display: none; opacity: 0;  "
+                   p             document.querySelector("body").style.cssText= "overflow: visible"
+                   p             });
+                   p     }
+
+
+
+section#modaL-10.modaL
+    #tab.popups
+        .popups__overlay
+            .popups__inner
+                i.icon-close21.popup__close.close-js
+                .popups__line
+                    p(style="background:  Crimson;  margin: 20px 0 5px;")
+                    p const MyReviewes = () => {
+                    p     let d = document.querySelector(".hidden");
+                    p     let   p = true;
+                    p     let  h = d.nextElementSibling;
+                    p     // let  f = d.offsetHeight;
+                    p     let  textProjects = d.innerHTML;
+                    p     // d.setAttribute("style", "max-height: 0px;  z-index: -2; opacity:  0;");
+                    p
+                    p     h.addEventListener("click", (function () {
+                    p     if(p === false){
+                    p     d.setAttribute("style", "max-height: 0px;  z-index: -2; opacity:  0;");
+                    p         h.textContent = "Читать далее...";
+                    p p = true;
+                    p     setTimeout(()=>{   d.innerHTML = ""  }, 200);
+                    p
+                    p
+                    p }else{
+                    p     d.setAttribute("style", "max-height: " + 200 + "px;  z-index: 1; opacity:  1;");
+                    p     h.textContent = "Свернуть";
+                    p     d.innerHTML =   textProjects
+                    p     setTimeout(()=>{  d.innerHTML =   textProjects  }, 200);
+                    p p = false;
+                    p }
+                    p })
+                    p );
+                    p };MyReviewes();
+
+section#modaL-9.modaL
+    #remove.popups
+        .popups__overlay
+            .popups__inner
+                i.icon-close21.popup__close.close-js
+                .popups__line
+                    p(style="background:  Crimson;  margin: 20px 0 5px;")
+                    p var myNode = document.getElementsByClassName("Person-card__icon");
+                    p    var el;
+                    p    while ((el = myNode[0])) {
+                    p        el.parentNode.removeChild(el);
+                    p }
+
 section#modaL-8.modaL
   #infinityCount.popups
       .popups__overlay
         .popups__inner
           i.icon-close21.popup__close.close-js
           .popups__line
-            p(style="background:  Crimson;  margin: 20px 0 5px;") счетчик работает бесконечно и внутри бесконечно вызывается функция. подходит например для слайдера с автосменой слайдов. память браузера отключает сайт при переполнении
+            p(style="background:  Crimson;  margin: 20px 0 5px;") счетчик выдает 0/1 ,работает бесконечно и внутри бесконечно вызывается функция.
             p (function main(counter){
-            p drowLeft();
-            p setTimeout(main,5000);
+            p if(count === 1){
+            p     count--
+            p }else{
+            p     count++
+            p }
+            p setTimeout(main,1000);
             p })
             p (0);
+
 
 section#modaL-7.modaL
   #children.popups
@@ -37,19 +153,26 @@ section#modaL-7.modaL
           i.icon-close21.popup__close.close-js
           .popups__line
 
-                p(style="background:  Crimson;  margin: 20px 0 5px;") получение именно массива потомков. можно применять все методы для массивов
-                p   let infinity = document.querySelector('.infinity');
-                p   let singles = Array.prototype.slice.call(infinity.childNodes);
+                p(style="background:  Crimson;  margin: 20px 0 5px;") при создании массива потомков ---  let singles = Array.prototype.slice.call(infinity.children);
+                p   children – коллекция детей, которые являются элементами.--->    Теперь цикл выводит только элементы
+                p    firstElementChild, lastElementChild – первый и последний дочерний элемент.
+                p    previousElementSibling, nextElementSibling – соседи-элементы.
+                p    parentElement – родитель-элемент.
+                p(style="background:  Crimson;  margin: 20px 0 5px;") здесь выйдут все узлы, включая тексты ---
+                p for (let i = 0; i < document.body.childNodes.length; i++) {
+                p   alert( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
+                p }
+                p   Коллекции перебираются циклом for..of
 
                 p(style="background:  DarkSalmon;  margin: 20px 0 5px;") получение псевдомассива  потомков
                 p var children = document.querySelector('wrap').children;
 
                 p(style="background:  DarkSalmon;margin: 20px 0    5px;") или
-                p var children = parg.childNodes;
+                p var children = parg.children;
                 p(style="background:  DarkSalmon; margin: 20px 0   5px;")  выведем содержимое первого узла псевдомассива массива потомков
-                p  console.log(parent.childNodes[0].textContent);
+                p  console.log(parent.children[0].textContent);
                 p(style="background:  DarkSalmon; margin: 20px 0   5px;") перебор псевдомассива потомков
-                p      let array = ul.childNodes;
+                p      let array = ul.children;
                 p      array.forEach((cell)=>{
                 p     cell.addEventListener('click', function(event){
                 p         console.log(event.target.innerHTML);
