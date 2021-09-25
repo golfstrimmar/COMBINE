@@ -5,7 +5,8 @@
 // import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
 
 import $ from 'jquery';
-import './js/common'
+// import './js/common'
+import './js/common-copy'
 import './js/copy'
 
 // import './js/scrolling'
@@ -38,14 +39,7 @@ import './js/modal'
 
 import './css/fonts.css'
 
-
-
-
 // import './css/plyr.css';
-
-
-
-
 // import './css/main.css';
 
 
